@@ -97,10 +97,10 @@ public class ItemDye extends Item {
                     // CraftBukkit start
                     Player player = (entityhuman instanceof EntityPlayer) ? (Player) entityhuman.getBukkitEntity() : null;
                     ((BlockSapling) Block.SAPLING).grow(world, i, j, k, world.random, true, player, null);
+                    --itemstack.count;
                     // CraftBukkit end
                 }
 
-                --itemstack.count;
             }
 
             return true;
